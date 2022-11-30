@@ -87,4 +87,5 @@ For me, this was a really fun side project and an opportunity to play with some 
 - Lack of monitoring of the device when it is running and is not connected to a computer.
 
 ## Credits 🙏
-- [Rui Santos example](https://randomnerdtutorials.com/esp32-async-web-server-espasyncwebserver-library/) helped me a lot. Thank you.
+- [Rui Santos example](https://randomnerdtutorials.com/esp32-async-web-server-espasyncwebserver-library/) helped me a lot. Thank you!
+- Friends who helped with the build. Thank you!
