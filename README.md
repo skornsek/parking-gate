@@ -5,6 +5,7 @@
   - [Ideas 💭](#ideas-)
   - [The process of making my remote control remote controlled 😉](#the-process-of-making-my-remote-control-remote-controlled-)
   - [Parts list ⚡](#parts-list-)
+  - [Flaws 😬](#flaws-)
   - [Credits 🙏](#credits-)
 
 ---
@@ -67,6 +68,11 @@ Now that everything works let's tidy things up in a neat package. Our circuit bo
 And this is the story of how Rampomatik 2000 was born. 🙌
 !["Rampomatik 2000"](photos/ClosedBox.png "Rampomatik 2000")
 
+Hope you enjoyed the read. If you have any questions open a new issue 😊
+
+For me, this was a really fun side project and an opportunity to play with some hardware. 🤗
+
+
 ## Parts list ⚡
 - [ESP32](https://www.aliexpress.com/item/1005004268911484.html?spm=a2g0o.productlist.main.1.1b977404EQ2jv7&algo_pvid=3759b9b0-4379-484d-bfa9-1242cc5cb513&aem_p4p_detail=20221130125231862443391584420007711908&algo_exp_id=3759b9b0-4379-484d-bfa9-1242cc5cb513-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000028838235689%22%7D&pdp_npi=2%40dis%21EUR%214.52%213.62%21%21%21%21%21%40214527c616698415515983978d07c7%2112000028838235689%21sea&curPageLogUid=K8rEilLw1p1Z&ad_pvid=20221130125231862443391584420007711908_1&ad_pvid=20221130125231862443391584420007711908_1) the brains
 - [Hörmann HSE 4 BS](https://www.amazon.de/-/en/H%C3%B6rmann-4511736-Handheld-Transmitter-Black/dp/B01LO54TGU/ref=sr_1_2?crid=ZWYD71GC78CW&keywords=h%C3%B6rmann%2Bhse4%2Bbs&qid=1669841712&sprefix=h%C3%B6rmann%2Bhse4%2Bbs%2Caps%2C92&sr=8-2&th=1) the remote
@@ -74,6 +80,11 @@ And this is the story of how Rampomatik 2000 was born. 🙌
 - [Arduino single relay module](https://www.aliexpress.com/item/1005003249627194.html?spm=a2g0o.productlist.main.1.60c01e63XtUXVc&algo_pvid=78303782-9d88-4d77-9b7e-9254e28c9427&aem_p4p_detail=2022113012561910525297922839560007483356&algo_exp_id=78303782-9d88-4d77-9b7e-9254e28c9427-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000024853952479%22%7D&pdp_npi=2%40dis%21EUR%212.02%211.92%21%21%21%21%21%402100bc5c16698417794615758d0752%2112000024853952479%21sea&curPageLogUid=yrCRG5sLg8Ub&ad_pvid=2022113012561910525297922839560007483356_1&ad_pvid=2022113012561910525297922839560007483356_1) the switch
 - [SOT-89]() chip for power management (ask the electrician for this one 😅)
 
+## Flaws 😬
+- Using HTTP. In the future, I would like to use HTTPS, but it was slower when I tried it.
+- Server restarts every 20 seconds. When I left the server running for a long time it crashed after a few requests so I put a restart command in the loop that executes every 20 seconds.
+- I would also like to implement some kind of whitelist for clients so I have more control.
+- Lack of monitoring of the device when it is running and is not connected to a computer.
 
 ## Credits 🙏
 - [Rui Santos example](https://randomnerdtutorials.com/esp32-async-web-server-espasyncwebserver-library/) helped me a lot. Thank you.
