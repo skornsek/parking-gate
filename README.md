@@ -1,6 +1,6 @@
-# ESP32 controlled Hörmann HSE 4 BS remote 🕹️
+# ESP32 controlled Hörmann remote for parking gate 🕹️
 
-- [ESP32 controlled Hörmann HSE 4 BS remote 🕹️](#esp32-controlled-hörmann-hse-4-bs-remote-️)
+- [ESP32 controlled Hörmann remote for parking gate 🕹️](#esp32-controlled-hörmann-remote-for-parking-gate-️)
   - [Problem 🚧](#problem-)
   - [Ideas 💭](#ideas-)
   - [The process of making my remote control remote controlled 😉](#the-process-of-making-my-remote-control-remote-controlled-)
@@ -53,7 +53,7 @@ Let's wire up those pins to a relay and connect it to the ESP32 so we can progra
 
 ![Board with ESP32 and Relay](./photos/board.png "Board with ESP32 and Relay")
 
-After everything was wired up I uploaded the [code](./source-code/source-code.ino) on my ESP32. The code contains a basic webserver that hosts a basic pin UI that looks like this:  
+After everything was wired up I uploaded the [code](./source-code/source-code.ino) on my ESP32. The code contains a basic web server that hosts a basic pin UI that looks like this:  
 ![PIN number UI](./photos/pinUI.png "PIN number UI")
 
 It also contains a basic API that checks if the sent pin number is correct and if it is it triggers a relay that opens the gate. Otherwise, it sends back a bad request that indicates that the pin number received by the web server is wrong.
